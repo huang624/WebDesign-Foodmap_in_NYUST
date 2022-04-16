@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        var pic1Arr = new Array("阿寶.jpg", "活力永.jpg", "三姊妹.jpg", "晶品.jpg", "弘爺.jpg", "慢食.jpg", "夯胖.jpg", "奶味.jpg", "傳香.jpg","科大.jpg");
+        var breakfastArr = new Array("阿寶", "活力永", "三姊妹", "晶品", "弘爺", "慢食", "夯胖", "奶味", "傳香", "科大");
+        $(document).ready(function () {
+            $('#accordion').empty();            
+            for (var i = 0; i < breakfastArr.length; i++) {
+                var html = '<div class="card"><div class="card-header" id="heading' + i + '"><button id="'+i+'" class="btn btn-link " data-toggle="collapse" data-target="#collapse' + i + '" aria-expanded="true" aria-controls="collapse' + i + '" >' + breakfastArr[i] + '</button></div><div id="collapse' + i + '" class="collapse" aria-labelledby="heading' + i + '" data-parent="#accordion"><div class="card-body">' + '<br><img src="img/'+pic1Arr[i]+'"' + 'class="img-fluid" style="max-width:800px ; max-height:700px;"' + '" >' + '</div></div></div>';
+                $('#accordion').append(html);
+            }            
+        });      
+
+        function go_top() {
+            $('.collapse').collapse('hide');
+            document.documentElement.scrollTo({ top: 0, behavior: "smooth" });   
+        }
+        function show_menu() {
+            var num = Math.floor((Math.random() * breakfastArr.length) + 1);            
+            var id_body = "#collapse" + num;            
+            $(id_body).collapse("show");
+            var x = $("#"+num).offset();  
+            //取得TOP座標位置後存入變數中   
+            document.documentElement.scrollTo({ top: x.top, behavior: "smooth" }); 
+            alert(breakfastArr[num]);
+            
+        }
+
+    </script>
+
+    <style>
+        body {
+            background-color:transparent;
+        }
+
+        .card-header {
+            background-color: #444444;
+            text-align: center;
+        }
+
+        .card-header:hover {
+            background-color: #666666;
+            border-color: transparent;
+        }
+
+        .card-body {            
+            text-align: center;
+            font-family: Microsoft JhengHei; /*字型*/
+            font-size: 20px;
+            max-width:90%;
+        }
+
+        .btn.btn-link { /*按鈕*/
+            min-width: 90%; /*大小*/
+            color: white; /*字顏色*/
+            font-family: Microsoft JhengHei /*字型*/
+        }
+
+        input {
+            background-color: #444444;
+            color: white;
+            border-radius: 50px;
+            border: 0px;
+            font-size: 15px;
+            width: 80%;
+        }
+
+        a {
+            font-family: Microsoft JhengHei; /*字型*/
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--卡片-->
+    <div type="button" id="accordion" style="width:50% ; margin:0px auto;">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    11
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--計算機-->
+    <div id="computer" style="border:0px; position: fixed; right: 0px; bottom: 0px;">
+        <iframe src="computer.html" frameborder="0" border="0" width="200" height="215" align="right" scrolling="no"></iframe>
+    </div>
+
+    <!--TOP-->
+    <div style="border:0px; position: fixed; right: 5px; bottom: 230px; position: fixed;">
+        <input type="button" value="TOP" style="width: 80px; height: 80px" onclick="go_top()" />
+    </div>
+    <!--隨機-->
+    <div style="border:0px; position: fixed; right: 5px; bottom: 330px; position: fixed;">
+        <input type="button" value="隨機" id="random" style="width: 80px; height: 80px" onclick="show_menu()" />
+    </div>
+
+
+</body>
+</html>

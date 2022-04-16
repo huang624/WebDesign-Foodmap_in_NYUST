@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function go_top() {
+            $('.collapse').collapse('hide');
+            document.documentElement.scrollTo({ top: 0, behavior: "smooth" });   
+        }
+        
+    </script>
+    <style>
+        body {
+            background-color:transparent;
+        }
+        .card {
+            font-family: Microsoft JhengHei; /*字型*/
+            
+        }
+        .card-body {
+            background-color: #FCF0E4;
+            text-align: center;
+            font-family: Microsoft JhengHei; /*字型*/
+        }
+        input {
+            background-color: #444444;
+            color: white;
+            border-radius: 50px;
+            border: 0px;
+            font-size: 15px;
+            width: 80%;
+        }
+
+        a {
+            font-family: Microsoft JhengHei; /*字型*/
+            font-size: 30px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="container" style="width:50% ; margin:0px auto;">
+        <div class="card">
+            <div class="card-header bg-warning">主餐</div>
+            <div class="card-body">
+                <p><img src="img/rice.gif" style="max-width:100%" /></p>
+
+            </div>
+
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m1">
+                牛丼飯
+            </button>
+            <div class="modal fade" id="m1">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">牛丼飯食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/牛丼飯.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                火鍋牛肉片 約180g, 洋蔥 1/2顆, 蔥 1支, 白飯 適量, 水 約1/2杯<br><br />
+                                調味醬汁:<br>
+                                醬油 2大匙, 米酒, 2大匙 糖, 1.5小匙, 醋(可略) 1/2小匙, 薑泥 1小匙, 鹽 1/2小匙<br><br />
+                                步驟:<br>
+                                1.將洋蔥切成細條狀，火鍋肉片如果太長，可從中間切開成兩段，蔥切成蔥花，調味醬汁的材料加在一起調勻<br>
+                                2.鍋中加入1-2小匙油，炒香洋蔥<br>
+                                3.將牛肉片加入略微翻炒，然後倒入醬汁及水<br>
+                                4.將牛肉煮熟後，將洋蔥及牛肉盛裝在飯上，鍋中醬汁用中火收汁，略變濃後淋上<br>
+                                5.灑上蔥花及一點芝麻趁熱享用
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m9">
+                蛋包飯
+            </button>
+            <div class="modal fade" id="m9">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">蛋包飯食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/蛋包飯.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                雞胸肉 100克, 洋蔥 1/4顆, 紅蘿蔔 15克, 白飯 2碗, 無鹽奶油, 6克, 牛番茄 1顆, 雞蛋 2顆<br><br />
+                                調味醬汁:<br>
+                                鹽 4克, 黑胡椒 3克, 番茄醬 30克<br><br />
+                                步驟:<br>
+                                1.鍋中下油，放入雞胸肉拌炒，再加入鹽、黑胡椒、洋蔥拌炒<br>
+                                2.放入紅蘿蔔拌炒，再下白飯炒散後，加入無鹽奶油、番茄拌炒<br>
+                                3.倒入番茄醬、鹽、黑胡椒拌炒均勻即可起鍋<br>
+                                4.將雞蛋打散成蛋液，加入鹽攪拌均勻<br>
+                                5.鍋中下奶油，將融化的奶油均勻塗抹在鍋底，放入蛋液，用筷子以順時鐘畫圈攪拌，待蛋液稍微凝固後即可取出，鋪蓋在炒飯上<br>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <br>
+        <div class="card">
+            <div class="card-header bg-warning">肉食</div>
+            <div class="card-body">
+                <p><img src="img/meat.gif" style="max-width:100%" /></p>
+
+            </div>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m2">
+                泡菜牛肉
+            </button>
+            <div class="modal fade" id="m2">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">泡菜牛肉食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/泡菜牛肉.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                牛肉火鍋片 約200克, 韓式泡菜 適量, 菇 適量, 大蒜 1顆, 蔥 適量<br><br />
+                                調味醬汁:<br>
+                                淡醬油 2大匙, 白胡椒 少許, 米酒 1大匙, 麻油 少許<br><br />
+                                步驟:<br>
+                                1.火鍋肉片退冰後加入淡醬油再加入少許的胡椒抓醃一下<br>
+                                2.切蔥花、大蒜切丁<br>
+                                3.起油鍋下醃過的火鍋肉片<br>
+                                4.肉片煎香斷色後下大蒜爆香<br>
+                                5.爆香大蒜後加入菇類<br>
+                                6.菇拌炒一下加入泡菜炒均<br>
+                                7.嗆一些酒增加香氣<br>
+                                8.蓋上鍋蓋燜煮一下讓味道更融合<br>
+                                9.起鍋前加少許香油提香氣（麻油也可）<br>
+                                10.撒入蔥花完成<br><br />
+                                小撇步:<br>
+                                1.喜歡辣的可以額外加辣椒一起炒<br>
+                                2.喜歡濕潤的口感可以把泡菜的湯汁加入一起拌炒<br>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m4">
+                韓式燒肉
+            </button>
+            <div class="modal fade" id="m4">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">韓式燒肉食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/韓式燒肉.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                火鍋肉片(牛豬皆可) 200克, 白芝麻(可省略) 適量, 中型蘋果或水梨 1/4個, 蒜泥 1瓣<br><br />
+                                調味醬汁:<br>
+                                糖 1小匙, 米酒 1大匙, 醬油 1大匙, 麻油 1/2小匙<br><br />
+                                步驟:<br>
+                                1.先調好醬料：將蘋果或水梨磨成泥，加入蒜泥、糖、米酒、醬油和麻油，拌勻即可<br>
+                                2.將肉片加入醬汁碗內稍微抓醃一下，讓肉片各面都沾附醬汁即可<br>
+                                3.熱平底鍋，抹薄薄一層油，將肉片夾入鍋中，一片片攤開煎熟，稍微收汁即可享用，上桌前可以灑一點白芝麻，既增色又添香<br>
+                                4.當成冷食便當主菜超級合適！搭配生菜、簡單醃漬的小菜或者市售的泡菜，就是好看又好吃的冷食便當<br>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m5">
+                起司豬排
+            </button>
+            <div class="modal fade" id="m5">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">起司豬排食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/起司豬排.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                梅花火鍋豬肉片 30片, 切達起司 5-6片, 麵粉 適量, 蛋 2顆, 麵包粉 適量, 炸油 適量<br><br />
+                                步驟:<br>
+                                1.將肉片以十字方式放置,中間放入半塊起司片,(起司對折再對折),肉片以順時針方向將肉片折向起司,確實將起司片抱覆.(若怕炸過程中起司餡露出,則肉片可以用到三片,將起司餡完全包覆<br>
+                                2.將包好的食材外頭先行沾覆一層麵粉(低/中/高皆可)<br>
+                                3.肉餡-->沾麵粉-->沾蛋液-->沾麵包粉<br>
+                                4.完成的肉餡放置十分鐘,讓麵包粉與蛋液黏得更緊,下鍋炸才不會麵包粉散開來<br>
+                                5.下油鍋炸,(油量高過食材高度,中火,炸至熟時肉餡會膨脹,起司如果有包覆的好的話,炸的過程中應該是不會露出來.)食用時請提醒食用者,內餡很燙,小心就口<br>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="card">
+            <div class="card-header bg-warning">肉捲</div>
+            <div class="card-body">
+                <p><img src="img/meatroll.gif" style="max-width:100%" /></p>
+
+            </div>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m6">
+                玉米筍肉捲
+            </button>
+            <div class="modal fade" id="m6">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">玉米筍肉捲食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/玉米筍肉捲.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                玉米筍 6根, 火鍋薄肉片 6片, 片栗粉或太白粉 適量<br><br />
+                                調味醬汁:<br>
+                                醬油 1大匙, 米霖 1/3大匙<br><br />
+                                步驟:<br>
+                                1.煮滾熱水，放入玉米筍汆燙2分鐘<br>
+                                2.將玉米筍吸乾水分，捲入肉片中<br>
+                                3.調理盤上撲灑片栗粉，將肉捲一圈沾滿<br>
+                                4.鍋中放一點點油，開中火，排排放入肉捲，各面煎至有點褐色<br>
+                                5.轉小火，加2大匙水，蓋上鍋蓋悶煎一分鐘<br>
+                                6.加入醬汁煮至稍微收乾，將鍋滾一滾讓肉捲沾上醬汁，就可夾出盛盤了<br>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m3">
+                日式豬肉金針菇韭菜捲
+            </button>
+            <div class="modal fade" id="m3">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark" bg-dark>
+                            <h3 class="modal-title"><font color="white">日式豬肉金針菇韭菜捲</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/日式豬肉金針菇韭菜捲.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                豬五花肉片 1盒, 金針菇 1把, 韭菜 1小把, 水 2大匙, 太白粉水 1小匙, 白芝麻粒 適量<br>
+                                調味醬汁:<br><br />
+                                日式醬油（或薄鹽醬油） 1大匙, 蠔油 1大匙, 味霖 1大匙, 胡椒粉 少許, 香油 適量<br><br />
+                                步驟:<br>
+                                1.將金針菇和韭菜都切成一小段<br>
+                                2.取2～3片豬五花，放上韭菜和金針菇<br>
+                                3.捲好將收口朝下，煎的時候，比較不會散開<br>
+                                4.將醬料先調好<br>
+                                5.熱鍋，放少許油，將捲好的豬肉捲下鍋用小火煎到兩面金黃焦香，記得ㄧ開始煎，豬肉捲收口朝下喔，這樣煎好的豬肉捲不容易散開<br>
+                                6.煎好，先呈出備用<br>
+                                7.利用剛鍋內煎肉少許的油，下剛調好的醬汁，稍煮香後，下煎好的豬肉捲，燒至入味，燒的時後，可以用長筷子將豬肉捲兩面都翻ㄧ下，讓豬肉捲均勻上色，起鍋前淋上太白粉水勾薄芡，再淋上香油，留些醬汁<br>
+                                8.呈盤，在豬肉捲上灑些白芝麻粒、增加風味，鍋內的醬汁再淋上豬肉捲，再搭配脆口的蔬菜吃起來夠味但不膩口<br>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <br>
+        <div class="card">
+            <div class="card-header bg-warning">湯品</div>
+            <div class="card-body">
+                <p><img src="img/soup.gif" style="max-width:100%" /></p>
+
+            </div>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m7">
+                冬筍香菇排骨湯
+            </button>
+            <div class="modal fade" id="m7">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">冬筍香菇排骨湯食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/冬筍香菇排骨湯.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                冬筍 2根, 乾香菇 12朵, 排骨 1根, 蒜 5瓣<br><br />
+                                調味醬汁:<br>
+                                鹽 適量, 米酒 3/10杯<br><br />
+                                步驟:<br>
+                                1.冬筍切薄片、乾香菇泡水、排骨剁塊川燙去血水、蒜去膜、去蒂頭備用<br>
+                                2.取一鍋水，待水滾放入所有食材及米酒，大火滾開後改小火悶煮，煮約1個多小時，斟酌以鹽調味即可<br><br />
+
+                                小撇步:<br>
+                                調味料單位「杯」是指「量米杯」<br>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m8">
+                清燉牛腩湯
+            </button>
+            <div class="modal fade" id="m8">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">清燉牛腩湯食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/清燉牛腩湯.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                牛腩 1斤, 白蘿蔔小條 1條, 冬筍 1枝, 香菜 少許, 干貝粉 少許<br><br />
+                                步驟:<br>
+                                1.將所有材料洗淨，牛腩以熱水川燙，洗淨蘿蔔切小塊，冬筍切片備用<br>
+                                2.取一鍋熱水，水滾後將牛腩、蘿蔔及冬筍加入，燉至牛腩軟嫩，起鍋前以干貝粉調味<br>
+                                3.食用時，撒入香菜即可<br><br />
+                                小撇步:<br>
+                                也可加入大白菜，味道更清甜<br>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+
+        <br>
+        <div class="card">
+            <div class="card-header bg-warning">甜點</div>
+            <div class="card-body">
+                <p><img src="img/dessert.gif" style="max-width:100%" /></p>
+
+            </div>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#m10">
+                草莓大福
+            </button>
+            <div class="modal fade" id="m10">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h3 class="modal-title"><font color="white">草莓大福食譜</font></h3>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <div class="modal-body ">
+                            <img src="img/草莓大福.webp" width="200"><br />
+                            <div>
+                                食材:<br>
+                                米粉 320克, 砂糖 80克, 水 380克, 草莓 12顆, 片栗粉 適量, 紅豆餡 430克<br><br />
+                                步驟:<br>
+                                1.將水、糯米粉、砂糖攪拌到無顆粒狀，並拿去蒸爐（電鍋）蒸25分鐘<br>
+                                2.將蒸熟的糯米糰整成長條狀<br>
+                                3.將糯米糰每40克成一小團備用<br>
+                                4.紅豆泥分成每38克小團備用<br>
+                                5.紅豆團壓成圓片並包入草莓<br>
+                                6.將糯米小團沾片栗粉包入紅豆團，收口捏緊朝下<br>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--TOP-->
+    <div style="border:0px; position: fixed; right: 5px; bottom: 230px; position: fixed;">
+        <input type="button" value="TOP" style="width: 80px; height: 80px" onclick="go_top()" />
+    </div>
+    
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>computer</title>
+    <style>
+        table {
+            background-color: #000;
+            border-radius: 5px;
+            padding: 0px 5px;
+        }
+
+        input {
+            background-color: #444444;
+            color: white;
+            border-radius: 3px;
+            border: 0px;
+            font-size: 15px;
+            width: 80%;
+        }
+
+        input:hover {
+            background-color: #666666;
+            color: white;
+        }
+    </style>
+    <script>
+
+        var temp = 0;
+        var Oper = 0;
+
+        function num(str) {
+
+            if (document.getElementById("box").value == 0) {
+                document.getElementById("box").value = str;
+            } else {
+                document.getElementById("box").value += str;
+            }
+        }
+        function oper(str) {
+            equal();
+            valueA = document.getElementById("box").value;
+            Oper = str;
+            document.getElementById("box").value = 0;
+        }
+
+        function ac() {
+            temp = 0;
+            strOper = 0;
+            valueM = 0;
+            document.getElementById("box").value = 0;
+        }
+
+        function equal() {
+
+            switch (Oper) {
+                case '+':
+                    document.getElementById("box").value = parseFloat(valueA) + parseFloat(document.getElementById("box").value);
+                    break;
+                case '-':
+                    document.getElementById("box").value = parseFloat(valueA) - parseFloat(document.getElementById("box").value);
+                    break;
+                case '*':
+                    document.getElementById("box").value = parseFloat(valueA) * parseFloat(document.getElementById("box").value);
+                    break;
+                case '/':
+                    document.getElementById("box").value = parseFloat(valueA) / parseFloat(document.getElementById("box").value);
+                    break;
+                default:
+                    break;
+            }
+
+
+            //防呆用
+
+            temp = null;
+            Oper = null;
+        }
+
+
+
+
+/**/</script>
+</head>
+
+<body>   
+     <table>
+            <tr>
+                <td style="height:20px"></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="4">
+                    <input style="width:95%;text-align:right" type="text" value="0" id="box" />
+                </td>
+            </tr>
+            <tr><td style="height:10px"></td></tr>
+
+            <tr align="center">
+                <td>    <input type="button" value="7" onClick="num('7')">  </td>
+                <td>    <input type="button" value="8" onClick="num('8')">  </td>
+                <td>    <input type="button" value="9" onClick="num('9')">  </td>
+                <td>    <input type="button" value="+" onClick="oper('+')"> </td>
+            </tr>
+            <tr>
+                <td style="height:5px"></td>
+            </tr>
+            <tr align="center">
+                <td>    <input type="button" value="4" onClick="num('4')">  </td>
+                <td>    <input type="button" value="5" onClick="num('5')">  </td>
+                <td>    <input type="button" value="6" onClick="num('6')">  </td>
+                <td>    <input type="button" value="-" onClick="oper('-')"> </td>
+            </tr>
+            <tr>
+                <td style="height:5px"></td>
+            </tr>
+            <tr align="center">
+                <td>    <input type="button" value="1" onClick="num('1')">  </td>
+                <td>    <input type="button" value="2" onClick="num('2')">  </td>
+                <td>    <input type="button" value="3" onClick="num('3')">  </td>
+                <td>    <input type="button" value="x" onClick="oper('*')"> </td>
+            </tr>
+            <tr>
+                <td style="height:5px"></td>
+            </tr>
+            <tr align="center">
+                <td>    <input type="button" value="C" onClick="ac()">  </td>
+                <td>    <input type="button" value="0" onClick="num('0')">  </td>
+                <td>    <input type="button" value="=" onClick="equal()">      </td>
+                <td>    <input type="button" value="/" onClick="oper('/')"> </td>
+            </tr>
+            <tr><td style="height:10px"></td></tr>
+        </table>
+    
+</body>
+
+</html>
